@@ -1,0 +1,37 @@
+{
+  "name": "ufg-agent",
+  "version": "1.0.0",
+  "description": "creates UFG auction inventory",
+  "main": "index.js",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "concurrently": "^3.5.1",
+    "cookie-session": "^2.0.0-beta.3",
+    "cors": "^2.8.4",
+    "currently": "0.0.8",
+    "express": "4.15.5",
+    "express-validator": "4.2.1",
+    "html-pdf": "^2.2.0",
+    "mongoose": "^4.11.13",
+    "nodemon": "^1.12.1",
+    "pdfkit": "^0.8.3",
+    "request": "^2.88.0"
+  },
+  "scripts": {
+    "start": "node index.js",
+    "client": "npm run start --prefix client",
+    "server": "nodemon index.js",
+    "dev": "concurrently  \"npm run server\" \"npm run client\" ",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/richardmckenzie/ufg-agent.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/richardmckenzie/ufg-agent/issues"
+  },
+  "homepage": "https://github.com/richardmckenzie/ufg-agent#readme"
+}
